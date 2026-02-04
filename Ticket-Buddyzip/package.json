@@ -1,0 +1,19 @@
+{
+  "name": "scientech_100-tickets",
+  "private": true,
+  "version": "1.7.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "setup": "bash start.sh"
+  },
+  "dependencies": {
+    "discord.js": "14.15.3",
+    "discord-html-transcripts": "3.2.0",
+    "better-sqlite3": "11.0.0",
+    "quick.db": "9.1.7",
+    "dotenv": "16.4.5",
+    "yaml": "2.4.5",
+    "moment-timezone": "0.5.45"
+  }
+}

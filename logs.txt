@@ -1,0 +1,986 @@
+[Wednesday, January 7, 2026 at 6:36:05 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: INVALID_TOKEN]
+
+Error [TokenInvalid]: An invalid token was provided.
+    at Client.login (/home/runner/workspace/node_modules/discord.js/src/client/Client.js:216:52)
+    at Object.<anonymous> (/home/runner/workspace/Ticket-Buddyzip/index.js:216:8)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Module._load (node:internal/modules/cjs/loader:1096:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49
+
+[Thursday, January 15, 2026 at 4:59:32 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: INVALID_TOKEN]
+
+Error [TokenInvalid]: An invalid token was provided.
+    at Client.login (/home/runner/workspace/node_modules/discord.js/src/client/Client.js:216:52)
+    at Object.<anonymous> (/home/runner/workspace/Ticket-Buddyzip/index.js:216:8)
+    at Module._compile (node:internal/modules/cjs/loader:1521:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+    at Module.load (node:internal/modules/cjs/loader:1266:32)
+    at Module._load (node:internal/modules/cjs/loader:1091:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49
+
+[Thursday, January 15, 2026 at 5:01:08 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[50035]: Invalid Form Body
+application_id[NUMBER_TYPE_COERCE]: Value "undefined" is not snowflake.
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1163:23)
+    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:994:14)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async /home/runner/workspace/Ticket-Buddyzip/events/ready.js:22:38
+
+
+[Error Context] -> [Commands Registration Error]: an error occurred during slash command registration[Thursday, January 15, 2026 at 5:01:08 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.29 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:04:26 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-47
+
+[Thursday, January 15, 2026 at 5:04:26 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.86 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:07:50 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #open-47 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:07:50 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-47 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:07:50 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.70 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:07:50 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #open-47 with 5 stars
+
+[Thursday, January 15, 2026 at 5:07:50 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-48
+
+[Thursday, January 15, 2026 at 5:32:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.92 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:32:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #open-48 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:32:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-48 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:32:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #open-48 with 3 stars
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.25 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-49
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #open-49 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-49 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #open-49 with 4 stars
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #fish-50
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #fish-50 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #fish-50 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:35:33 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #fish-50 with 2 stars
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 39.76 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #fish-51
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #fish-51 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #fish-51 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-52
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #support-52 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-52 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #fish-51 with 5 stars
+
+[Thursday, January 15, 2026 at 5:45:01 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #support-52 with 1 stars
+
+[Thursday, January 15, 2026 at 5:57:30 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.88 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:58:48 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.70 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 5:58:48 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-1
+
+[Thursday, January 15, 2026 at 5:58:48 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #support-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:58:48 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 5:58:48 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #support-1 with 3 stars
+
+[Thursday, January 15, 2026 at 5:58:48 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-1
+
+[Thursday, January 15, 2026 at 5:58:48 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] mia._.mf created the ticket #support-1
+
+[Thursday, January 15, 2026 at 6:02:25 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #support-1 which was created by mia._.mf with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:02:25 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-1 which was created by mia._.mf with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:02:25 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #support-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:02:25 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:02:25 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 38.04 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:02:25 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #support-1 with 5 stars
+
+[Thursday, January 15, 2026 at 6:03:23 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-1
+
+[Thursday, January 15, 2026 at 6:03:23 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #support-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:03:23 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:03:23 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.02 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:03:23 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #support-1 with 5 stars
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-2
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #support-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.15 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-3
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #support-3 with 5 stars
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #report-1
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #report-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #report-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:05:16 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #report-1 with 3 stars
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1322:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:114:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the delete command.[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 40.29 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #report-2
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #report-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #report-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1322:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1464:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1322:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:114:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the delete command.[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1322:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:114:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the delete command.[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-4
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/delete.js:43:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the delete command.[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:114:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/delete.js:43:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the delete command.[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/tickets.js:49:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the tickets command.[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-5
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-5 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1322:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1464:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1322:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1550:11)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:114:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the delete command.[Thursday, January 15, 2026 at 6:15:03 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #support-6
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #support-6 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #support-6 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #support-6 with 2 stars
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #report-3
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #report-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:15:03 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #report-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:29:44 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 39.01 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:29:44 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-1
+
+[Thursday, January 15, 2026 at 6:29:44 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:29:44 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-2
+
+[Thursday, January 15, 2026 at 6:33:58 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #open-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:33:58 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:33:58 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-3
+
+[Thursday, January 15, 2026 at 6:33:58 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.03 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:33:58 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #open-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:33:58 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:36:08 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.35 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:38:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-4
+
+[Thursday, January 15, 2026 at 6:38:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.93 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:38:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #open-4 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:38:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-4 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:38:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #open-5
+
+[Thursday, January 15, 2026 at 6:38:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #open-5 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:38:24 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #open-5 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.61 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 sent the ticket panel with id 1 in the channel #💠❕__testing-5__
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] -> [Bot v1.7.0] [Node.JS v20.20.0] [Type: unhandledRejection]
+
+ReferenceError: Cannot access 'guildId' before initialization
+    at /home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:433:59
+    at Array.forEach (<anonymous>)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:425:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 sent the ticket panel with id 1 in the channel #💠❕__testing-5__
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #other-ste4lth_100
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #other-ste4lth_100 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #other-ste4lth_100 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:43:35 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 created the ticket #other-ste4lth_100
+
+[Thursday, January 15, 2026 at 6:49:12 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 closed the ticket #other-ste4lth_100 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:49:12 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 deleted the ticket #other-ste4lth_100 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 6:49:12 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] ste4lth_100 rated ticket #other-ste4lth_100 with 5 stars
+
+[Thursday, January 15, 2026 at 6:49:12 PM UTC] [Bot v1.7.0] [NodeJS v20.20.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.52 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Thursday, January 15, 2026 at 7:14:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-6
+
+[Thursday, January 15, 2026 at 7:14:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-6 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 7:14:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #open-6 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 15, 2026 at 7:14:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 38.40 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 27, 2026 at 6:28:31 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 40.60 seconds. A total of 38 commands were registered globally. Bot is in 90 server(s).
+
+[Tuesday, January 27, 2026 at 6:29:47 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.56 seconds. A total of 38 commands were registered globally. Bot is in 90 server(s).
+
+[Tuesday, January 27, 2026 at 6:29:47 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added goat0_0. to the blacklist with reason No reason provided. and duration permanent.
+
+[Tuesday, January 27, 2026 at 6:29:47 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+ReferenceError: logsChannel is not defined
+    at blacklistAdd (/home/runner/workspace/Ticket-Buddyzip/utils/userBlacklist.js:130:45)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/blacklist.js:144:7)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the blacklist command.[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.08 seconds. A total of 38 commands were registered globally. Bot is in 90 server(s).
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-1
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/rename.js:126:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 renamed the ticket #demo to #demo
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/rename.js:126:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 renamed the ticket #ste4lth_100-staff to #ste4lth_100, {staff}
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 removed goat0_0. from the blacklist with reason No reason provided..
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at blacklistRemove (/home/runner/workspace/Ticket-Buddyzip/utils/userBlacklist.js:374:28)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/blacklist.js:166:7)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added goat0_0. to the blacklist with reason No reason provided. and duration 1m.
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at blacklistAdd (/home/runner/workspace/Ticket-Buddyzip/utils/userBlacklist.js:132:28)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/blacklist.js:144:7)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 opened the role settings menu in VOID Bot Testing
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 removed goat0_0. from the blacklist with reason test.
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at blacklistRemove (/home/runner/workspace/Ticket-Buddyzip/utils/userBlacklist.js:374:28)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/blacklist.js:166:7)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #ste4lth_100-staff which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #ste4lth_100-staff which was created by ste4lth_100
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #ste4lth_100-staff which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, January 27, 2026 at 6:35:05 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #ste4lth_100-staff with 5 stars
+
+[Wednesday, January 28, 2026 at 7:53:45 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.24 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Wednesday, January 28, 2026 at 7:54:33 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-2
+
+[Wednesday, January 28, 2026 at 7:54:33 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.84 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Wednesday, January 28, 2026 at 7:54:33 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added goat0_0. to the blacklist with reason No reason provided. and duration 1m.
+
+[Wednesday, January 28, 2026 at 7:54:33 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at blacklistAdd (/home/runner/workspace/Ticket-Buddyzip/utils/userBlacklist.js:132:28)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/blacklist.js:144:7)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Wednesday, January 28, 2026 at 7:56:32 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.77 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.02 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 removed goat0_0. from the blacklist with reason No reason provided..
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added goat0_0. to the blacklist with reason No reason provided. and duration 1m.
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] [Blacklist Cleanup] Removed expired entry: guild:1456279983407370426:user-1156225523228356618
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #open-2 which was created by ste4lth_100
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #open-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Wednesday, January 28, 2026 at 7:57:59 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #open-2 with 5 stars
+
+[Thursday, January 29, 2026 at 4:21:57 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 40.29 seconds. A total of 38 commands were registered globally. Bot is in 92 server(s).
+
+[Thursday, January 29, 2026 at 4:21:57 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-3
+
+[Thursday, January 29, 2026 at 4:21:57 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added goat0_0. to the blacklist with reason No reason provided. and duration 1m.
+
+[Thursday, January 29, 2026 at 4:21:57 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] [Blacklist Cleanup] Removed expired entry: guild:1456279983407370426:user-1156225523228356618
+
+[Thursday, January 29, 2026 at 4:33:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.66 seconds. A total of 38 commands were registered globally. Bot is in 92 server(s).
+
+[Thursday, January 29, 2026 at 4:33:10 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 38.33 seconds. A total of 38 commands were registered globally. Bot is in 92 server(s).
+
+[Thursday, January 29, 2026 at 4:33:11 PM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/close.js:53:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the close command.[Thursday, January 29, 2026 at 4:33:11 PM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+[Thursday, January 29, 2026 at 4:33:10 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 29, 2026 at 4:33:10 PM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1480:11)
+
+[Thursday, January 29, 2026 at 4:33:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #open-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, January 29, 2026 at 4:33:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #open-3 with 5 stars
+
+[Thursday, January 29, 2026 at 5:26:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.80 seconds. A total of 38 commands were registered globally. Bot is in 92 server(s).
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-7
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-7 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 40.13 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logsChannel.send is not a function
+    at reopenTicket (/home/runner/workspace/Ticket-Buddyzip/utils/ticketReopen.js:247:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:1452:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 re-opened the ticket #open-7 which was created by ste4lth_100
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-7 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #open-7 which was created by ste4lth_100
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #open-7 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 3:54:59 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #open-7 with 5 stars
+
+[Friday, January 30, 2026 at 4:35:02 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 38.60 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Friday, January 30, 2026 at 4:35:02 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-8
+
+[Friday, January 30, 2026 at 4:35:02 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-8 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 4:35:02 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #open-8 which was created by ste4lth_100
+
+[Friday, January 30, 2026 at 4:35:02 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #open-8 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 4:35:02 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #open-8 with 5 stars
+
+[Friday, January 30, 2026 at 4:42:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 36.05 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Friday, January 30, 2026 at 4:42:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-4
+
+[Friday, January 30, 2026 at 4:42:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-4 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 4:42:34 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #open-4 which was created by ste4lth_100
+
+[Friday, January 30, 2026 at 4:50:22 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 35.53 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Friday, January 30, 2026 at 4:50:22 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #open-4 which was created by ste4lth_100
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #open-4 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 35.81 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #open-4 with 5 stars
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #open-9
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #open-9 which was created by ste4lth_100
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #open-9 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #open-9 which was created by ste4lth_100
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #open-9 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Friday, January 30, 2026 at 4:58:21 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #open-9 with 5 stars
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 36.64 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] void_trapped created the ticket #pr-1
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #pr-1 which was created by void_trapped with the reason: No reason provided.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #pr-1 which was created by void_trapped with the reason: No reason provided.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] flez.7 created the ticket #pro-1
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] flez.7 closed the ticket #pro-1 which was created by flez.7 with the reason: No reason provided.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #pro-1 which was created by flez.7 with the reason: No reason provided.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added flez.7 to the blacklist with reason No reason provided. and duration permanent.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 removed flez.7 from the blacklist with reason No reason provided..
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added flez.7 to the blacklist with reason No reason provided. and duration 5m.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #acad-1
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #acad-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #acad-1 which was created by ste4lth_100
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #acad-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Sunday, February 1, 2026 at 12:46:17 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #acad-1 with 5 stars
+
+[Sunday, February 1, 2026 at 1:04:21 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 37.57 seconds. A total of 38 commands were registered globally. Bot is in 91 server(s).
+
+[Sunday, February 1, 2026 at 1:04:21 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] [Blacklist Cleanup] Removed expired entry: guild:1456279983407370426:user-948308042015969370
+
+[Monday, February 2, 2026 at 12:58:39 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 35.41 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Monday, February 2, 2026 at 12:58:39 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 reloaded all the global slash commands. All server configurations were preserved.
+
+[Monday, February 2, 2026 at 1:09:16 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 35.45 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Monday, February 2, 2026 at 1:09:16 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /grinder in guild 1456279983407370426
+
+[Monday, February 2, 2026 at 1:09:16 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /grinder (message type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:09:16 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 updated custom command /grinder (message type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 37.61 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Failed to register custom command /pro/semi-pro: Invalid string format
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /pro/semi-pro (questionnaire type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted custom command /pro/semi-pro in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /academy in guild 1456279983407370426
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /academy (questionnaire type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 updated custom command /academy (questionnaire type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Unregistered custom command /academy in guild 1456279983407370426
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted custom command /academy in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 7:34:27 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+Error: Invalid string length
+    at Object.run (/home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:2422:79)
+    at /home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:972:67
+    at Array.reduce (<anonymous>)
+    at _StringValidator.parse (/home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:972:29)
+    at TextInputBuilder.setLabel (/home/runner/workspace/node_modules/@discordjs/builders/dist/index.js:1532:38)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/customcmd.js:178:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the customcmd command.[Monday, February 2, 2026 at 7:34:27 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+Error: Invalid string length
+    at Object.run (/home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:2422:79)
+    at /home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:972:67
+    at Array.reduce (<anonymous>)
+    at _StringValidator.parse (/home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:972:29)
+    at TextInputBuilder.setLabel (/home/runner/workspace/node_modules/@discordjs/builders/dist/index.js:1532:38)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/customcmd.js:178:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the customcmd command.[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 36.47 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /creative in guild 1456279983407370426
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /creative (message type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 updated custom command /creative (message type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 updated custom command /creative (message type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /academy in guild 1456279983407370426
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /academy (questionnaire type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 updated custom command /creative (message type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 updated custom command /academy (questionnaire type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 updated custom command /academy (questionnaire type) in guild VOID Bot Testing
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /200-iq in guild 1456279983407370426
+
+[Monday, February 2, 2026 at 1:39:11 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /200-iq (message type) in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:40:38 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 38.87 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Tuesday, February 3, 2026 at 10:40:38 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Unregistered custom command /200-iq in guild 1456279983407370426
+
+[Tuesday, February 3, 2026 at 10:40:38 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted custom command /200-iq in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:40:38 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 submitted questionnaire response for /academy in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:40:38 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+Error: Invalid string length
+    at Object.run (/home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:2422:79)
+    at /home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:972:67
+    at Array.reduce (<anonymous>)
+    at _StringValidator.parse (/home/runner/workspace/node_modules/@sapphire/shapeshift/dist/cjs/index.cjs:972:29)
+    at TextInputBuilder.setLabel (/home/runner/workspace/node_modules/@discordjs/builders/dist/index.js:1532:38)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Utility/customcmd.js:178:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the customcmd command.[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 37.01 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /verify in guild 1456279983407370426
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /verify (button type) in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 clicked button for custom command /verify in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 clicked button for custom command /verify in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Unregistered custom command /academy in guild 1456279983407370426
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted custom command /academy in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /academy in guild 1456279983407370426
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /academy (questionnaire type) in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 submitted questionnaire response with attachments for /academy in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 10:55:35 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 submitted questionnaire response with attachments for /academy in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 36.27 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #acad-2
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 submitted questionnaire response with attachments for /academy in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/add.js:168:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added slyhus to the ticket #acad-2 with reason No reason provided.
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError: logChannel.send is not a function
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/commands/Tickets/add.js:168:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added void_chase to the ticket #acad-2 with reason No reason provided.
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] slyhus clicked button for custom command /verify in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 clicked button for custom command /verify in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] slyhus submitted questionnaire response for /academy in guild VOID Bot Testing
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #acad-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #acad-2 which was created by ste4lth_100
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #acad-2 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, February 3, 2026 at 11:20:37 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #acad-2 with 4 stars
+
+[Tuesday, February 3, 2026 at 12:11:17 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 37.27 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Wednesday, February 4, 2026 at 6:10:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 38.13 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Wednesday, February 4, 2026 at 6:13:25 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 35.31 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+

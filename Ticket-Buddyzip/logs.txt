@@ -1,0 +1,126 @@
+[Tuesday, January 6, 2026 at 6:19:03 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 38.07 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 6:29:34 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.21 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 6:29:34 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 created the ticket #open-1
+
+[Tuesday, January 6, 2026 at 6:29:34 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 closed the ticket #open-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, January 6, 2026 at 6:29:34 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 deleted the ticket #open-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, January 6, 2026 at 6:29:34 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 rated ticket #open-1 with 3 stars
+
+[Tuesday, January 6, 2026 at 6:32:40 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.35 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 6:35:27 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.56 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 36.14 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 created the ticket #open-1
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+TypeError: logsChannel.send is not a function
+    at /home/runner/workspace/utils/ticketClaim.js:211:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async claimTicket (/home/runner/workspace/utils/ticketClaim.js:44:3)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:1617:9)
+
+
+[Error Context] -> [Logging Error]: please make sure to at least configure your default log channel[Tuesday, January 6, 2026 at 7:01:03 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 claimed the ticket #open-1
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 closed the ticket #open-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] ste4lth_100 deleted the ticket #open-1 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ChatInputCommandInteraction.reply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:114:5)
+    at async Object.execute (/home/runner/workspace/commands/Utility/setup.js:462:7)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:213:9)
+
+
+[Error Context] -> [InteractionCreate]: an error occurred while executing the setup command.[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+Error [InteractionNotReplied]: The reply to this interaction has not been sent or deferred.
+    at ChatInputCommandInteraction.editReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:160:48)
+    at Object.execute (/home/runner/workspace/events/interactionCreate.js:217:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:1518:11)
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+DiscordAPIError[40060]: Interaction has already been acknowledged.
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:1432:11)
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+DiscordAPIError[50035]: Invalid Form Body
+user_id[NUMBER_TYPE_COERCE]: Value "null" is not snowflake.
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SequentialHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1163:23)
+    at async SequentialHandler.queueRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:994:14)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async UserManager.fetch (/home/runner/workspace/node_modules/discord.js/src/managers/UserManager.js:94:18)
+    at async getUser (/home/runner/workspace/utils/mainUtils.js:140:14)
+    at async closeTicket (/home/runner/workspace/utils/ticketClose.js:32:24)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:1519:11)
+
+
+[Error Context] -> [getUser Function Error]: error fetching user with ID undefined[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+TypeError: Cannot read properties of null (reading 'id')
+    at closeTicket (/home/runner/workspace/utils/ticketClose.js:67:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:1519:11)
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:1518:11)
+
+[Tuesday, January 6, 2026 at 7:01:03 AM UTC] -> [Bot v1.7.0] [Node.JS v20.19.3] [Type: ERROR]
+
+DiscordAPIError[10062]: Unknown interaction
+    at handleErrors (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:762:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async BurstHandler.runRequest (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:866:23)
+    at async _REST.request (/home/runner/workspace/node_modules/@discordjs/rest/dist/index.js:1307:22)
+    at async ButtonInteraction.deferReply (/home/runner/workspace/node_modules/discord.js/src/structures/interfaces/InteractionResponses.js:71:5)
+    at async Object.execute (/home/runner/workspace/events/interactionCreate.js:1432:11)
+
+[Tuesday, January 6, 2026 at 7:28:28 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.57 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 7:32:37 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.94 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 7:34:01 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.94 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 7:52:15 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 37.26 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
+[Tuesday, January 6, 2026 at 7:54:14 AM UTC] [Bot v1.7.0] [NodeJS v20.19.3] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy#9878. Startup time was 35.87 seconds. A total of 38 commands were registered globally. Bot is in 89 server(s).
+
