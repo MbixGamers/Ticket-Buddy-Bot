@@ -270,13 +270,21 @@ module.exports = {
           .setRequired(true)
           .setMaxLength(1000);
 
-        const targetChannelInput = new TextInputBuilder()
-          .setCustomId("target_channel")
-          .setLabel("Channel ID to send answers (optional)")
-          .setPlaceholder("Leave blank to reply in the same channel")
+        const rolesInput = new TextInputBuilder()
+          .setCustomId("auto_roles")
+          .setLabel("Auto Roles (IDs, comma separated)")
+          .setPlaceholder("RoleID1, RoleID2")
           .setStyle(TextInputStyle.Short)
           .setRequired(false)
-          .setMaxLength(20);
+          .setMaxLength(200);
+
+        const approvalInput = new TextInputBuilder()
+          .setCustomId("approval_required")
+          .setLabel("Approval Required? (Yes/No)")
+          .setPlaceholder("No")
+          .setStyle(TextInputStyle.Short)
+          .setRequired(false)
+          .setMaxLength(3);
 
         const embedTitleInput = new TextInputBuilder()
           .setCustomId("result_title")
@@ -290,7 +298,8 @@ module.exports = {
           new ActionRowBuilder().addComponents(introInput),
           new ActionRowBuilder().addComponents(questionsInput),
           new ActionRowBuilder().addComponents(targetChannelInput),
-          new ActionRowBuilder().addComponents(embedTitleInput)
+          new ActionRowBuilder().addComponents(rolesInput),
+          new ActionRowBuilder().addComponents(approvalInput)
         );
 
         await mainDB.set(`customCmdPending.${interaction.user.id}`, {

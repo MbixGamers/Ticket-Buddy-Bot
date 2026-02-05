@@ -151,6 +151,8 @@ module.exports = {
           answers,
           resultTitle: cmd.resultTitle,
           targetChannel: cmd.targetChannel,
+          autoRoles: cmd.autoRoles,
+          approvalRequired: cmd.approvalRequired,
           userId: interaction.user.id,
           userTag: interaction.user.tag,
           userAvatar: interaction.user.displayAvatarURL({ extension: "png", size: 256 }),
@@ -192,7 +194,8 @@ module.exports = {
         const introMessage = interaction.fields.getTextInputValue("intro_message");
         const questionsRaw = interaction.fields.getTextInputValue("questions");
         const targetChannel = interaction.fields.getTextInputValue("target_channel") || "";
-        const resultTitle = interaction.fields.getTextInputValue("result_title") || "Questionnaire Response";
+        const autoRolesRaw = interaction.fields.getTextInputValue("auto_roles") || "";
+        const approvalRequired = (interaction.fields.getTextInputValue("approval_required") || "no").toLowerCase() === "yes";
 
         const questions = questionsRaw.split("\n").filter(q => q.trim()).slice(0, 5);
 
@@ -213,7 +216,9 @@ module.exports = {
           introMessage,
           questions,
           targetChannel,
-          resultTitle,
+          autoRoles: autoRolesRaw.split(",").map(id => id.trim()).filter(id => id),
+          approvalRequired,
+          resultTitle: "Questionnaire Response",
           createdBy: interaction.user.id,
           createdAt: isEdit ? existingCommands[pendingData.name]?.createdAt : Date.now(),
           updatedAt: Date.now(),
@@ -237,6 +242,72 @@ module.exports = {
     }
 
     if (interaction.isButton()) {
+      if (interaction.customId.startsWith("q_approve_") || interaction.customId.startsWith("q_deny_")) {
+        const isApprove = interaction.customId.startsWith("q_approve_");
+        const userId = interaction.customId.split("_")[2];
+        const guildId = interaction.guild.id;
+
+        // Staff check
+        const ticketData = await ticketsDB.get(interaction.channel.id);
+        const categoryId = ticketData?.categoryID;
+        const category = config.TicketCategories.find(c => c.id === categoryId);
+        const staffRoles = category?.support_role_ids || [];
+        
+        const hasStaffRole = interaction.member.roles.cache.some(role => staffRoles.includes(role.id));
+        const isAdmin = interaction.member.permissions.has(PermissionFlagsBits.Administrator);
+        
+        if (!hasStaffRole && !isAdmin) {
+          return interaction.reply({
+            content: "Only staff members can approve or deny this response.",
+            flags: MessageFlags.Ephemeral,
+          });
+        }
+
+        const responseData = await mainDB.get(`questionnaireResponse.${userId}`);
+        if (!responseData) {
+          return interaction.reply({
+            content: "This response data has expired or already been processed.",
+            flags: MessageFlags.Ephemeral,
+          });
+        }
+
+        if (isApprove) {
+          try {
+            const member = await interaction.guild.members.fetch(userId);
+            if (member && responseData.autoRoles) {
+              await member.roles.add(responseData.autoRoles);
+            }
+          } catch (e) {
+            console.error("Failed to add roles on approval:", e);
+          }
+          
+          await logMessage(`${interaction.user.tag} approved questionnaire for ${responseData.userTag} in ${interaction.guild.name}`);
+          
+          const embed = EmbedBuilder.from(interaction.message.embeds[0])
+            .setColor("#00FF00")
+            .setFooter({ text: `Approved by ${interaction.user.tag}` });
+
+          await interaction.update({
+            embeds: [embed],
+            components: [],
+          });
+        } else {
+          await logMessage(`${interaction.user.tag} denied questionnaire for ${responseData.userTag} in ${interaction.guild.name}`);
+          
+          const embed = EmbedBuilder.from(interaction.message.embeds[0])
+            .setColor("#FF0000")
+            .setFooter({ text: `Denied by ${interaction.user.tag}` });
+
+          await interaction.update({
+            embeds: [embed],
+            components: [],
+          });
+        }
+
+        await mainDB.delete(`questionnaireResponse.${userId}`);
+        return;
+      }
+
       if (interaction.customId.startsWith("customcmd_btn_")) {
         const cmdName = interaction.customId.replace("customcmd_btn_", "");
         const guildId = interaction.guild.id;
@@ -326,7 +397,7 @@ module.exports = {
             iconURL: responseData.userAvatar,
           })
           .setTimestamp()
-          .setFooter({ text: `Command: /${responseData.cmdName}` });
+          .setFooter({ text: `Command: /${responseData.cmdName}${responseData.approvalRequired ? " | Pending Approval" : ""}` });
 
         responseData.answers.forEach((item, index) => {
           embed.addFields({
@@ -335,6 +406,21 @@ module.exports = {
             inline: false,
           });
         });
+
+        const components = [];
+        if (responseData.approvalRequired && responseData.autoRoles && responseData.autoRoles.length > 0) {
+          const approveBtn = new ButtonBuilder()
+            .setCustomId(`q_approve_${userId}`)
+            .setLabel("Approve")
+            .setStyle(ButtonStyle.Success);
+
+          const denyBtn = new ButtonBuilder()
+            .setCustomId(`q_deny_${userId}`)
+            .setLabel("Deny")
+            .setStyle(ButtonStyle.Danger);
+
+          components.push(new ActionRowBuilder().addComponents(approveBtn, denyBtn));
+        }
 
         let targetChannel = interaction.channel;
         if (responseData.targetChannel) {
@@ -347,8 +433,11 @@ module.exports = {
         }
 
         try {
-          await targetChannel.send({ embeds: [embed] });
-          await mainDB.delete(`questionnaireResponse.${userId}`);
+          await targetChannel.send({ embeds: [embed], components });
+          // Note: We don't delete responseData yet if approval is required because we need it for the role assignment
+          if (!responseData.approvalRequired) {
+             await mainDB.delete(`questionnaireResponse.${userId}`);
+          }
           await logMessage(`${responseData.userTag} submitted questionnaire response for /${responseData.cmdName} in guild ${interaction.guild.name}`);
 
           return interaction.update({
@@ -483,24 +572,59 @@ module.exports = {
               } catch (e) {}
             }
 
-            // We must send the embeds as an array
-            await targetChannel.send({ embeds: imageEmbeds });
-            await mainDB.delete(`questionnaireResponse.${userId}`);
-            await logMessage(`${responseData.userTag} submitted questionnaire response with ${imageAttachments.length} images for /${responseData.cmdName} in guild ${interaction.guild.name}`);
-          } else {
-            // No attachments, just send the original embed
-            let targetChannel = interaction.channel;
-            if (responseData.targetChannel) {
-              try {
-                const channel = await interaction.guild.channels.fetch(responseData.targetChannel);
-                if (channel) {
-                  targetChannel = channel;
-                }
-              } catch (e) {}
+        // We must send the embeds as an array
+        const components = [];
+        if (responseData.approvalRequired && responseData.autoRoles && responseData.autoRoles.length > 0) {
+          const approveBtn = new ButtonBuilder()
+            .setCustomId(`q_approve_${userId}`)
+            .setLabel("Approve")
+            .setStyle(ButtonStyle.Success);
+
+          const denyBtn = new ButtonBuilder()
+            .setCustomId(`q_deny_${userId}`)
+            .setLabel("Deny")
+            .setStyle(ButtonStyle.Danger);
+
+          components.push(new ActionRowBuilder().addComponents(approveBtn, denyBtn));
+        }
+
+        await targetChannel.send({ embeds: imageEmbeds, components });
+        if (!responseData.approvalRequired) {
+          await mainDB.delete(`questionnaireResponse.${userId}`);
+        }
+        await logMessage(`${responseData.userTag} submitted questionnaire response with ${imageAttachments.length} images for /${responseData.cmdName} in guild ${interaction.guild.name}`);
+      } else {
+        // No attachments, just send the original embed
+        let targetChannel = interaction.channel;
+        if (responseData.targetChannel) {
+          try {
+            const channel = await interaction.guild.channels.fetch(responseData.targetChannel);
+            if (channel) {
+              targetChannel = channel;
             }
-            await targetChannel.send({ embeds: [embed] });
-            await mainDB.delete(`questionnaireResponse.${userId}`);
-          }
+          } catch (e) {}
+        }
+
+        const components = [];
+        if (responseData.approvalRequired && responseData.autoRoles && responseData.autoRoles.length > 0) {
+          const approveBtn = new ButtonBuilder()
+            .setCustomId(`q_approve_${userId}`)
+            .setLabel("Approve")
+            .setStyle(ButtonStyle.Success);
+
+          const denyBtn = new ButtonBuilder()
+            .setCustomId(`q_deny_${userId}`)
+            .setLabel("Deny")
+            .setStyle(ButtonStyle.Danger);
+
+          components.push(new ActionRowBuilder().addComponents(approveBtn, denyBtn));
+        }
+
+        await targetChannel.send({ embeds: [embed], components });
+        if (!responseData.approvalRequired) {
+          await mainDB.delete(`questionnaireResponse.${userId}`);
+        }
+      }
 
           try {
             await userMessage.delete();

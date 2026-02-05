@@ -1026,3 +1026,33 @@ TypeError: logChannel.send is not a function
 
 [Thursday, February 5, 2026 at 9:08:46 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted custom command /demo in guild VOID Bot Testing
 
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 36.01 seconds. A total of 39 commands were registered globally. Bot is in 90 server(s).
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Unregistered custom command /verify in guild 1456279983407370426
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted custom command /verify in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /verify in guild 1456279983407370426
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /verify (button type) in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] -> [Bot v1.7.0] [Node.JS v22.22.0] [Type: ERROR]
+
+TypeError [ModalSubmitInteractionFieldNotFound]: Required field with custom id "trigger_command" not found.
+    at ModalSubmitFields.getField (/home/runner/workspace/node_modules/discord.js/src/structures/ModalSubmitFields.js:36:23)
+    at ModalSubmitFields.getTextInputValue (/home/runner/workspace/node_modules/discord.js/src/structures/ModalSubmitFields.js:51:17)
+    at Object.execute (/home/runner/workspace/Ticket-Buddyzip/events/customCommandHandler.js:86:51)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Unregistered custom command /verify in guild 1456279983407370426
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted custom command /verify in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /verify in guild 1456279983407370426
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /verify (button type) in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #acad-3
+
+[Thursday, February 5, 2026 at 9:17:01 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 submitted questionnaire response with 4 images for /academy in guild VOID Bot Testing
+
