@@ -83,13 +83,9 @@ module.exports = {
 
         const messageContent = interaction.fields.getTextInputValue("message_content");
         const buttonLabel = interaction.fields.getTextInputValue("button_label");
-        let buttonStyle = interaction.fields.getTextInputValue("button_style") || "Success";
+        const triggerCommand = interaction.fields.getTextInputValue("trigger_command") || "";
+        const autoRoles = interaction.fields.getTextInputValue("auto_roles") || "";
         const followUpMessage = interaction.fields.getTextInputValue("followup_message");
-
-        const validStyles = ["Primary", "Secondary", "Success", "Danger"];
-        if (!validStyles.includes(buttonStyle)) {
-          buttonStyle = "Success";
-        }
 
         const existingCommands = await mainDB.get(`customCommands.${pendingData.guildId}`) || {};
         
@@ -100,7 +96,9 @@ module.exports = {
           access: pendingData.access || "everyone",
           messageContent,
           buttonLabel,
-          buttonStyle,
+          buttonStyle: "Success", // Defaulted due to modal limit
+          triggerCommand,
+          autoRoles: autoRoles.split(",").map(id => id.trim()).filter(id => id),
           followUpMessage,
           createdBy: interaction.user.id,
           createdAt: isEdit ? existingCommands[pendingData.name]?.createdAt : Date.now(),
@@ -251,6 +249,39 @@ module.exports = {
             content: "This command no longer exists.",
             flags: MessageFlags.Ephemeral,
           });
+        }
+
+        // Handle Auto Roles
+        if (cmd.autoRoles && cmd.autoRoles.length > 0) {
+          try {
+            await interaction.member.roles.add(cmd.autoRoles);
+          } catch (e) {
+            console.error("Failed to add auto roles:", e);
+          }
+        }
+
+        // Handle Trigger Command (Questionnaire)
+        if (cmd.triggerCommand) {
+          const triggerCmd = existingCommands[cmd.triggerCommand];
+          if (triggerCmd && triggerCmd.type === "questionnaire") {
+            const modal = new ModalBuilder()
+              .setCustomId(`customcmd_questionnaire_submit_${cmd.triggerCommand}`)
+              .setTitle(triggerCmd.resultTitle || "Questionnaire");
+
+            triggerCmd.questions.slice(0, 5).forEach((question, index) => {
+              const input = new TextInputBuilder()
+                .setCustomId(`question_${index}`)
+                .setLabel(question.substring(0, 45))
+                .setPlaceholder("Enter your answer...")
+                .setStyle(TextInputStyle.Paragraph)
+                .setRequired(true)
+                .setMaxLength(1000);
+
+              modal.addComponents(new ActionRowBuilder().addComponents(input));
+            });
+
+            return interaction.showModal(modal);
+          }
         }
 
         await logMessage(`${interaction.user.tag} clicked button for custom command /${cmdName} in guild ${interaction.guild.name}`);

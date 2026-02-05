@@ -193,6 +193,22 @@ module.exports = {
           .setRequired(false)
           .setMaxLength(20);
 
+        const triggerInput = new TextInputBuilder()
+          .setCustomId("trigger_command")
+          .setLabel("Trigger Command Name (optional)")
+          .setPlaceholder("Command name to trigger (must be questionnaire)")
+          .setStyle(TextInputStyle.Short)
+          .setRequired(false)
+          .setMaxLength(32);
+
+        const rolesInput = new TextInputBuilder()
+          .setCustomId("auto_roles")
+          .setLabel("Auto Roles (IDs, comma separated)")
+          .setPlaceholder("RoleID1, RoleID2")
+          .setStyle(TextInputStyle.Short)
+          .setRequired(false)
+          .setMaxLength(200);
+
         const followUpInput = new TextInputBuilder()
           .setCustomId("followup_message")
           .setLabel("Message when button is clicked")
@@ -205,8 +221,23 @@ module.exports = {
           new ActionRowBuilder().addComponents(messageInput),
           new ActionRowBuilder().addComponents(buttonLabelInput),
           new ActionRowBuilder().addComponents(buttonStyleInput),
+          new ActionRowBuilder().addComponents(triggerInput),
+          new ActionRowBuilder().addComponents(followUpInput)
+          // Note: Modal rows limited to 5 components. Roles will be handled in another way or we can swap components.
+          // Let's swap followUp for roles if trigger is used, but for now let's just use 5.
+        );
+
+        // Update: Discord modals only allow 5 components. Let's optimize.
+        modal.setComponents([]);
+        modal.addComponents(
+          new ActionRowBuilder().addComponents(messageInput),
+          new ActionRowBuilder().addComponents(buttonLabelInput),
+          new ActionRowBuilder().addComponents(triggerInput),
+          new ActionRowBuilder().addComponents(rolesInput),
           new ActionRowBuilder().addComponents(followUpInput)
         );
+        // Note: button_style removed from modal to fit trigger/roles. Defaulting to Success.
+
 
         await mainDB.set(`customCmdPending.${interaction.user.id}`, {
           name,
