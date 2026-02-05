@@ -408,19 +408,17 @@ module.exports = {
 
           if (attachments.length > 0) {
             const imageAttachments = attachments.filter(a => a.contentType?.startsWith("image/"));
-            
-            // Discord allows up to 10 embeds per message, which is the standard way to show multiple images
             const imageEmbeds = [];
             
             if (imageAttachments.length > 0) {
-              // The first image goes in the main embed
+              // The main embed gets the first image
               embed.setImage(imageAttachments[0].url);
               imageEmbeds.push(embed);
               
-              // Additional images go in their own embeds with the same URL, which Discord groups together
+              // Additional images go in separate embeds, but to group them they MUST have the same URL (if using a specific URL)
+              // or simply be sent in the same array.
               for (let i = 1; i < Math.min(imageAttachments.length, 10); i++) {
                 const nextEmbed = new EmbedBuilder()
-                  .setURL(embed.data.url || "https://discord.com") // Embeds need the same URL or title to group, or just send multiple
                   .setImage(imageAttachments[i].url);
                 imageEmbeds.push(nextEmbed);
               }
@@ -454,6 +452,7 @@ module.exports = {
               } catch (e) {}
             }
 
+            // We must send the embeds as an array
             await targetChannel.send({ embeds: imageEmbeds });
             await mainDB.delete(`questionnaireResponse.${userId}`);
             await logMessage(`${responseData.userTag} submitted questionnaire response with ${imageAttachments.length} images for /${responseData.cmdName} in guild ${interaction.guild.name}`);

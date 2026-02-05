@@ -984,3 +984,39 @@ TypeError: logChannel.send is not a function
 
 [Wednesday, February 4, 2026 at 6:13:25 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 35.31 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
 
+[Wednesday, February 4, 2026 at 12:06:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 37.76 seconds. A total of 39 commands were registered globally. Bot is in 91 server(s).
+
+[Wednesday, February 4, 2026 at 12:06:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] void_trapped created the ticket #pro-2
+
+[Wednesday, February 4, 2026 at 12:06:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 added goat0_0. to the blacklist with reason No reason provided. and duration 2m.
+
+[Wednesday, February 4, 2026 at 12:06:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] [Blacklist Cleanup] Removed expired entry: guild:1456279983407370426:user-1156225523228356618
+
+[Wednesday, February 4, 2026 at 12:06:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #pro-2 which was created by void_trapped with the reason: No reason provided.
+
+[Wednesday, February 4, 2026 at 12:06:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #pro-2 which was created by void_trapped
+
+[Wednesday, February 4, 2026 at 12:06:29 PM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #pro-2 which was created by void_trapped with the reason: No reason provided.
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] The ticket bot is now ready! Logged in as Ticket Buddy™#9878. Startup time was 37.86 seconds. A total of 39 commands were registered globally. Bot is in 90 server(s).
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created the ticket #pro-3
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 submitted questionnaire response with 2 images for /academy in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] Registered custom command /demo in guild 1456279983407370426
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 created custom command /demo (button type) in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 clicked button for custom command /demo in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 clicked button for custom command /demo in guild VOID Bot Testing
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 closed the ticket #pro-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 manually saved the transcript of ticket #pro-3 which was created by ste4lth_100
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 deleted the ticket #pro-3 which was created by ste4lth_100 with the reason: No reason provided.
+
+[Thursday, February 5, 2026 at 8:26:29 AM UTC] [Bot v1.7.0] [NodeJS v22.22.0] [LOG] ste4lth_100 rated ticket #pro-3 with 5 stars
+
