@@ -535,10 +535,10 @@ module.exports = {
               embed.setImage(imageAttachments[0].url);
               imageEmbeds.push(embed);
               
-              // Additional images go in separate embeds, but to group them they MUST have the same URL (if using a specific URL)
-              // or simply be sent in the same array.
+              // Additional images go in separate embeds
               for (let i = 1; i < Math.min(imageAttachments.length, 10); i++) {
                 const nextEmbed = new EmbedBuilder()
+                  .setURL("https://discord.com") // Match main embed URL if any, or just use a dummy to group
                   .setImage(imageAttachments[i].url);
                 imageEmbeds.push(nextEmbed);
               }
@@ -572,59 +572,59 @@ module.exports = {
               } catch (e) {}
             }
 
-        // We must send the embeds as an array
-        const components = [];
-        if (responseData.approvalRequired && responseData.autoRoles && responseData.autoRoles.length > 0) {
-          const approveBtn = new ButtonBuilder()
-            .setCustomId(`q_approve_${userId}`)
-            .setLabel("Approve")
-            .setStyle(ButtonStyle.Success);
+            // We must send the embeds as an array
+            const components = [];
+            if (responseData.approvalRequired && responseData.autoRoles && responseData.autoRoles.length > 0) {
+              const approveBtn = new ButtonBuilder()
+                .setCustomId(`q_approve_${userId}`)
+                .setLabel("Approve")
+                .setStyle(ButtonStyle.Success);
 
-          const denyBtn = new ButtonBuilder()
-            .setCustomId(`q_deny_${userId}`)
-            .setLabel("Deny")
-            .setStyle(ButtonStyle.Danger);
+              const denyBtn = new ButtonBuilder()
+                .setCustomId(`q_deny_${userId}`)
+                .setLabel("Deny")
+                .setStyle(ButtonStyle.Danger);
 
-          components.push(new ActionRowBuilder().addComponents(approveBtn, denyBtn));
-        }
-
-        await targetChannel.send({ embeds: imageEmbeds, components });
-        if (!responseData.approvalRequired) {
-          await mainDB.delete(`questionnaireResponse.${userId}`);
-        }
-        await logMessage(`${responseData.userTag} submitted questionnaire response with ${imageAttachments.length} images for /${responseData.cmdName} in guild ${interaction.guild.name}`);
-      } else {
-        // No attachments, just send the original embed
-        let targetChannel = interaction.channel;
-        if (responseData.targetChannel) {
-          try {
-            const channel = await interaction.guild.channels.fetch(responseData.targetChannel);
-            if (channel) {
-              targetChannel = channel;
+              components.push(new ActionRowBuilder().addComponents(approveBtn, denyBtn));
             }
-          } catch (e) {}
-        }
 
-        const components = [];
-        if (responseData.approvalRequired && responseData.autoRoles && responseData.autoRoles.length > 0) {
-          const approveBtn = new ButtonBuilder()
-            .setCustomId(`q_approve_${userId}`)
-            .setLabel("Approve")
-            .setStyle(ButtonStyle.Success);
+            await targetChannel.send({ embeds: imageEmbeds, components });
+            if (!responseData.approvalRequired) {
+              await mainDB.delete(`questionnaireResponse.${userId}`);
+            }
+            await logMessage(`${responseData.userTag} submitted questionnaire response with ${imageAttachments.length} images for /${responseData.cmdName} in guild ${interaction.guild.name}`);
+          } else {
+            // No attachments, just send the original embed
+            let targetChannel = interaction.channel;
+            if (responseData.targetChannel) {
+              try {
+                const channel = await interaction.guild.channels.fetch(responseData.targetChannel);
+                if (channel) {
+                  targetChannel = channel;
+                }
+              } catch (e) {}
+            }
 
-          const denyBtn = new ButtonBuilder()
-            .setCustomId(`q_deny_${userId}`)
-            .setLabel("Deny")
-            .setStyle(ButtonStyle.Danger);
+            const components = [];
+            if (responseData.approvalRequired && responseData.autoRoles && responseData.autoRoles.length > 0) {
+              const approveBtn = new ButtonBuilder()
+                .setCustomId(`q_approve_${userId}`)
+                .setLabel("Approve")
+                .setStyle(ButtonStyle.Success);
 
-          components.push(new ActionRowBuilder().addComponents(approveBtn, denyBtn));
-        }
+              const denyBtn = new ButtonBuilder()
+                .setCustomId(`q_deny_${userId}`)
+                .setLabel("Deny")
+                .setStyle(ButtonStyle.Danger);
 
-        await targetChannel.send({ embeds: [embed], components });
-        if (!responseData.approvalRequired) {
-          await mainDB.delete(`questionnaireResponse.${userId}`);
-        }
-      }
+              components.push(new ActionRowBuilder().addComponents(approveBtn, denyBtn));
+            }
+
+            await targetChannel.send({ embeds: [embed], components });
+            if (!responseData.approvalRequired) {
+              await mainDB.delete(`questionnaireResponse.${userId}`);
+            }
+          }
 
           try {
             await userMessage.delete();

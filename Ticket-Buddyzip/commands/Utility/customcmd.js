@@ -5,10 +5,6 @@ const {
   ActionRowBuilder,
   TextInputBuilder,
   TextInputStyle,
-  StringSelectMenuBuilder,
-  StringSelectMenuOptionBuilder,
-  ButtonBuilder,
-  ButtonStyle,
   EmbedBuilder,
   MessageFlags,
 } = require("discord.js");
@@ -97,7 +93,7 @@ module.exports = {
 
     if (!isAdmin && !hasAdminRole) {
       return interaction.reply({
-        content: "You don't have permission to manage custom commands. Administrator permission or an admin role is required.",
+        content: "You don't have permission to manage custom commands.",
         flags: MessageFlags.Ephemeral,
       });
     }
@@ -114,10 +110,12 @@ module.exports = {
       const existingCommands = await mainDB.get(`customCommands.${guildId}`) || {};
       if (existingCommands[name]) {
         return interaction.reply({
-          content: `A custom command with the name \`${name}\` already exists. Use \`/customcmd edit\` to modify it or \`/customcmd delete\` to remove it first.`,
+          content: `A custom command with the name \`${name}\` already exists.`,
           flags: MessageFlags.Ephemeral,
         });
       }
+
+      const pendingData = { name, description, type, access, guildId };
 
       if (type === "message") {
         const modal = new ModalBuilder()
@@ -127,26 +125,20 @@ module.exports = {
         const responseInput = new TextInputBuilder()
           .setCustomId("response_message")
           .setLabel("Response Message")
-          .setPlaceholder("Enter the message the bot will send when this command is used...")
           .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(2000);
+          .setRequired(true);
 
         const embedTitleInput = new TextInputBuilder()
           .setCustomId("embed_title")
-          .setLabel("Embed Title (optional, leave blank for text)")
-          .setPlaceholder("Title for an embed response")
+          .setLabel("Embed Title (optional)")
           .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(256);
+          .setRequired(false);
 
         const embedColorInput = new TextInputBuilder()
           .setCustomId("embed_color")
-          .setLabel("Embed Color (optional, e.g. #FF5733)")
-          .setPlaceholder("#5865F2")
+          .setLabel("Embed Color (e.g. #5865F2)")
           .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(7);
+          .setRequired(false);
 
         modal.addComponents(
           new ActionRowBuilder().addComponents(responseInput),
@@ -154,14 +146,7 @@ module.exports = {
           new ActionRowBuilder().addComponents(embedColorInput)
         );
 
-        await mainDB.set(`customCmdPending.${interaction.user.id}`, {
-          name,
-          description,
-          type,
-          access,
-          guildId,
-        });
-
+        await mainDB.set(`customCmdPending.${interaction.user.id}`, pendingData);
         await interaction.showModal(modal);
 
       } else if (type === "button") {
@@ -169,66 +154,13 @@ module.exports = {
           .setCustomId(`customcmd_button_${name}`)
           .setTitle(`Create /${name} Command`);
 
-        const messageInput = new TextInputBuilder()
-          .setCustomId("message_content")
-          .setLabel("Message to show with the button")
-          .setPlaceholder("Enter the message that appears with the button...")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(2000);
+        // Defining the 5 allowed components
+        const messageInput = new TextInputBuilder().setCustomId("message_content").setLabel("Message with Button").setStyle(TextInputStyle.Paragraph).setRequired(true);
+        const buttonLabelInput = new TextInputBuilder().setCustomId("button_label").setLabel("Button Label").setStyle(TextInputStyle.Short).setRequired(true);
+        const triggerInput = new TextInputBuilder().setCustomId("trigger_command").setLabel("Trigger Command (optional)").setStyle(TextInputStyle.Short).setRequired(false);
+        const rolesInput = new TextInputBuilder().setCustomId("auto_roles").setLabel("Auto Roles (IDs, comma separated)").setStyle(TextInputStyle.Short).setRequired(false);
+        const followUpInput = new TextInputBuilder().setCustomId("followup_message").setLabel("Click Response Message").setStyle(TextInputStyle.Paragraph).setRequired(true);
 
-        const buttonLabelInput = new TextInputBuilder()
-          .setCustomId("button_label")
-          .setLabel("Button Label")
-          .setPlaceholder("e.g. Complete, Send, Confirm")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(true)
-          .setMaxLength(80);
-
-        const buttonStyleInput = new TextInputBuilder()
-          .setCustomId("button_style")
-          .setLabel("Style: Primary/Secondary/Success/Danger")
-          .setPlaceholder("Success")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(20);
-
-        const triggerInput = new TextInputBuilder()
-          .setCustomId("trigger_command")
-          .setLabel("Trigger Command Name (optional)")
-          .setPlaceholder("Command name to trigger (must be questionnaire)")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(32);
-
-        const rolesInput = new TextInputBuilder()
-          .setCustomId("auto_roles")
-          .setLabel("Auto Roles (IDs, comma separated)")
-          .setPlaceholder("RoleID1, RoleID2")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(200);
-
-        const followUpInput = new TextInputBuilder()
-          .setCustomId("followup_message")
-          .setLabel("Message when button is clicked")
-          .setPlaceholder("Thank you for completing the process!")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(2000);
-
-        modal.addComponents(
-          new ActionRowBuilder().addComponents(messageInput),
-          new ActionRowBuilder().addComponents(buttonLabelInput),
-          new ActionRowBuilder().addComponents(buttonStyleInput),
-          new ActionRowBuilder().addComponents(triggerInput),
-          new ActionRowBuilder().addComponents(followUpInput)
-          // Note: Modal rows limited to 5 components. Roles will be handled in another way or we can swap components.
-          // Let's swap followUp for roles if trigger is used, but for now let's just use 5.
-        );
-
-        // Update: Discord modals only allow 5 components. Let's optimize.
-        modal.setComponents([]);
         modal.addComponents(
           new ActionRowBuilder().addComponents(messageInput),
           new ActionRowBuilder().addComponents(buttonLabelInput),
@@ -236,17 +168,8 @@ module.exports = {
           new ActionRowBuilder().addComponents(rolesInput),
           new ActionRowBuilder().addComponents(followUpInput)
         );
-        // Note: button_style removed from modal to fit trigger/roles. Defaulting to Success.
 
-
-        await mainDB.set(`customCmdPending.${interaction.user.id}`, {
-          name,
-          description,
-          type,
-          access,
-          guildId,
-        });
-
+        await mainDB.set(`customCmdPending.${interaction.user.id}`, pendingData);
         await interaction.showModal(modal);
 
       } else if (type === "questionnaire") {
@@ -254,45 +177,11 @@ module.exports = {
           .setCustomId(`customcmd_questionnaire_${name}`)
           .setTitle(`Create /${name} Command`);
 
-        const introInput = new TextInputBuilder()
-          .setCustomId("intro_message")
-          .setLabel("Introduction Message")
-          .setPlaceholder("Message shown before the questionnaire starts...")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(1000);
-
-        const questionsInput = new TextInputBuilder()
-          .setCustomId("questions")
-          .setLabel("Questions (one per line, max 5)")
-          .setPlaceholder("What is your name?\nWhat do you need help with?\nAny additional details?")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(1000);
-
-        const rolesInput = new TextInputBuilder()
-          .setCustomId("auto_roles")
-          .setLabel("Auto Roles (IDs, comma separated)")
-          .setPlaceholder("RoleID1, RoleID2")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(200);
-
-        const approvalInput = new TextInputBuilder()
-          .setCustomId("approval_required")
-          .setLabel("Approval Required? (Yes/No)")
-          .setPlaceholder("No")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(3);
-
-        const embedTitleInput = new TextInputBuilder()
-          .setCustomId("result_title")
-          .setLabel("Result Embed Title")
-          .setPlaceholder("Questionnaire Response")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(256);
+        const introInput = new TextInputBuilder().setCustomId("intro_message").setLabel("Intro Message").setStyle(TextInputStyle.Paragraph).setRequired(true);
+        const questionsInput = new TextInputBuilder().setCustomId("questions").setLabel("Questions (one per line)").setStyle(TextInputStyle.Paragraph).setRequired(true);
+        const targetChannelInput = new TextInputBuilder().setCustomId("target_channel").setLabel("Logging Channel ID").setStyle(TextInputStyle.Short).setRequired(false);
+        const rolesInput = new TextInputBuilder().setCustomId("auto_roles").setLabel("Auto Roles (IDs)").setStyle(TextInputStyle.Short).setRequired(false);
+        const approvalInput = new TextInputBuilder().setCustomId("approval_required").setLabel("Approval Required? (Yes/No)").setStyle(TextInputStyle.Short).setRequired(false);
 
         modal.addComponents(
           new ActionRowBuilder().addComponents(introInput),
@@ -302,14 +191,7 @@ module.exports = {
           new ActionRowBuilder().addComponents(approvalInput)
         );
 
-        await mainDB.set(`customCmdPending.${interaction.user.id}`, {
-          name,
-          description,
-          type,
-          access,
-          guildId,
-        });
-
+        await mainDB.set(`customCmdPending.${interaction.user.id}`, pendingData);
         await interaction.showModal(modal);
       }
 
@@ -318,223 +200,67 @@ module.exports = {
       const existingCommands = await mainDB.get(`customCommands.${guildId}`) || {};
 
       if (!existingCommands[name]) {
-        return interaction.reply({
-          content: `No custom command named \`${name}\` was found.`,
-          flags: MessageFlags.Ephemeral,
-        });
+        return interaction.reply({ content: `No command named \`${name}\` found.`, flags: MessageFlags.Ephemeral });
       }
 
       await interaction.deferReply({ flags: MessageFlags.Ephemeral });
-
       delete existingCommands[name];
       await mainDB.set(`customCommands.${guildId}`, existingCommands);
-
       await unregisterCustomCommand(guildId, name);
+      await logMessage(`${interaction.user.tag} deleted /${name}`);
 
-      await logMessage(`${interaction.user.tag} deleted custom command /${name} in guild ${interaction.guild.name}`);
-
-      return interaction.editReply({
-        content: `Custom command \`/${name}\` has been deleted successfully and unregistered from Discord.`,
-      });
+      return interaction.editReply({ content: `Command \`/${name}\` deleted.` });
 
     } else if (subcommand === "list") {
       const existingCommands = await mainDB.get(`customCommands.${guildId}`) || {};
       const commandNames = Object.keys(existingCommands);
 
       if (commandNames.length === 0) {
-        return interaction.reply({
-          content: "No custom commands have been created in this server yet. Use `/customcmd create` to create one.",
-          flags: MessageFlags.Ephemeral,
-        });
+        return interaction.reply({ content: "No custom commands found.", flags: MessageFlags.Ephemeral });
       }
 
       const embed = new EmbedBuilder()
         .setTitle("Custom Commands")
         .setColor("#5865F2")
-        .setDescription("Here are all the custom commands in this server:")
-        .setTimestamp();
+        .setDescription(commandNames.map(n => `\`/${n}\` (${existingCommands[n].type})`).join("\n"));
 
-      const commandList = commandNames.map((name) => {
-        const cmd = existingCommands[name];
-        const typeEmoji = cmd.type === "message" ? "💬" : cmd.type === "button" ? "🔘" : "📝";
-        return `${typeEmoji} \`/${name}\` - ${cmd.description} (${cmd.type})`;
-      }).join("\n");
-
-      embed.addFields({ name: "Commands", value: commandList });
-      embed.setFooter({ text: `Total: ${commandNames.length} custom command(s)` });
-
-      return interaction.reply({
-        embeds: [embed],
-        flags: MessageFlags.Ephemeral,
-      });
+      return interaction.reply({ embeds: [embed], flags: MessageFlags.Ephemeral });
 
     } else if (subcommand === "edit") {
       const name = interaction.options.getString("name").toLowerCase();
       const existingCommands = await mainDB.get(`customCommands.${guildId}`) || {};
-
-      if (!existingCommands[name]) {
-        return interaction.reply({
-          content: `No custom command named \`${name}\` was found.`,
-          flags: MessageFlags.Ephemeral,
-        });
-      }
-
       const cmd = existingCommands[name];
 
-      if (cmd.type === "message") {
-        const modal = new ModalBuilder()
-          .setCustomId(`customcmd_edit_message_${name}`)
-          .setTitle(`Edit /${name} Command`);
-
-        const responseInput = new TextInputBuilder()
-          .setCustomId("response_message")
-          .setLabel("Response Message")
-          .setPlaceholder("Enter the message the bot will send...")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(2000)
-          .setValue(cmd.responseMessage || "");
-
-        const embedTitleInput = new TextInputBuilder()
-          .setCustomId("embed_title")
-          .setLabel("Embed Title (optional)")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(256)
-          .setValue(cmd.embedTitle || "");
-
-        const embedColorInput = new TextInputBuilder()
-          .setCustomId("embed_color")
-          .setLabel("Embed Color (optional)")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(7)
-          .setValue(cmd.embedColor || "");
-
-        modal.addComponents(
-          new ActionRowBuilder().addComponents(responseInput),
-          new ActionRowBuilder().addComponents(embedTitleInput),
-          new ActionRowBuilder().addComponents(embedColorInput)
-        );
-
-        await mainDB.set(`customCmdPending.${interaction.user.id}`, {
-          name,
-          description: cmd.description,
-          type: cmd.type,
-          guildId,
-          isEdit: true,
-        });
-
-        await interaction.showModal(modal);
-
-      } else if (cmd.type === "button") {
-        const modal = new ModalBuilder()
-          .setCustomId(`customcmd_edit_button_${name}`)
-          .setTitle(`Edit /${name} Command`);
-
-        const messageInput = new TextInputBuilder()
-          .setCustomId("message_content")
-          .setLabel("Message to show with the button")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(2000)
-          .setValue(cmd.messageContent || "");
-
-        const buttonLabelInput = new TextInputBuilder()
-          .setCustomId("button_label")
-          .setLabel("Button Label")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(true)
-          .setMaxLength(80)
-          .setValue(cmd.buttonLabel || "");
-
-        const buttonStyleInput = new TextInputBuilder()
-          .setCustomId("button_style")
-          .setLabel("Button Style")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(20)
-          .setValue(cmd.buttonStyle || "Success");
-
-        const followUpInput = new TextInputBuilder()
-          .setCustomId("followup_message")
-          .setLabel("Message when button is clicked")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(2000)
-          .setValue(cmd.followUpMessage || "");
-
-        modal.addComponents(
-          new ActionRowBuilder().addComponents(messageInput),
-          new ActionRowBuilder().addComponents(buttonLabelInput),
-          new ActionRowBuilder().addComponents(buttonStyleInput),
-          new ActionRowBuilder().addComponents(followUpInput)
-        );
-
-        await mainDB.set(`customCmdPending.${interaction.user.id}`, {
-          name,
-          description: cmd.description,
-          type: cmd.type,
-          guildId,
-          isEdit: true,
-        });
-
-        await interaction.showModal(modal);
-
-      } else if (cmd.type === "questionnaire") {
-        const modal = new ModalBuilder()
-          .setCustomId(`customcmd_edit_questionnaire_${name}`)
-          .setTitle(`Edit /${name} Command`);
-
-        const introInput = new TextInputBuilder()
-          .setCustomId("intro_message")
-          .setLabel("Introduction Message")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(1000)
-          .setValue(cmd.introMessage || "");
-
-        const questionsInput = new TextInputBuilder()
-          .setCustomId("questions")
-          .setLabel("Questions (one per line, max 5)")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(1000)
-          .setValue(cmd.questions ? cmd.questions.join("\n") : "");
-
-        const targetChannelInput = new TextInputBuilder()
-          .setCustomId("target_channel")
-          .setLabel("Channel ID to send answers (optional)")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(20)
-          .setValue(cmd.targetChannel || "");
-
-        const embedTitleInput = new TextInputBuilder()
-          .setCustomId("result_title")
-          .setLabel("Result Embed Title")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(false)
-          .setMaxLength(256)
-          .setValue(cmd.resultTitle || "");
-
-        modal.addComponents(
-          new ActionRowBuilder().addComponents(introInput),
-          new ActionRowBuilder().addComponents(questionsInput),
-          new ActionRowBuilder().addComponents(targetChannelInput),
-          new ActionRowBuilder().addComponents(embedTitleInput)
-        );
-
-        await mainDB.set(`customCmdPending.${interaction.user.id}`, {
-          name,
-          description: cmd.description,
-          type: cmd.type,
-          guildId,
-          isEdit: true,
-        });
-
-        await interaction.showModal(modal);
+      if (!cmd) {
+        return interaction.reply({ content: "Command not found.", flags: MessageFlags.Ephemeral });
       }
+
+      const modal = new ModalBuilder().setCustomId(`customcmd_edit_${cmd.type}_${name}`).setTitle(`Edit /${name}`);
+
+      // Standardize the "Edit" logic to match the "Create" logic structure
+      if (cmd.type === "message") {
+        modal.addComponents(
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("response_message").setLabel("Response").setStyle(TextInputStyle.Paragraph).setValue(cmd.responseMessage || "").setRequired(true)),
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("embed_title").setLabel("Title").setStyle(TextInputStyle.Short).setValue(cmd.embedTitle || "").setRequired(false)),
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("embed_color").setLabel("Color").setStyle(TextInputStyle.Short).setValue(cmd.embedColor || "").setRequired(false))
+        );
+      } else if (cmd.type === "button") {
+        modal.addComponents(
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("message_content").setLabel("Message").setStyle(TextInputStyle.Paragraph).setValue(cmd.messageContent || "").setRequired(true)),
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("button_label").setLabel("Label").setStyle(TextInputStyle.Short).setValue(cmd.buttonLabel || "").setRequired(true)),
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("followup_message").setLabel("Response").setStyle(TextInputStyle.Paragraph).setValue(cmd.followUpMessage || "").setRequired(true))
+        );
+      } else if (cmd.type === "questionnaire") {
+        modal.addComponents(
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("intro_message").setLabel("Intro").setStyle(TextInputStyle.Paragraph).setValue(cmd.introMessage || "").setRequired(true)),
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("questions").setLabel("Questions").setStyle(TextInputStyle.Paragraph).setValue(cmd.questions?.join("\n") || "").setRequired(true)),
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("target_channel").setLabel("Channel ID").setStyle(TextInputStyle.Short).setValue(cmd.targetChannel || "").setRequired(false)),
+            new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("result_title").setLabel("Result Title").setStyle(TextInputStyle.Short).setValue(cmd.resultTitle || "").setRequired(false))
+        );
+      }
+
+      await mainDB.set(`customCmdPending.${interaction.user.id}`, { ...cmd, name, guildId, isEdit: true });
+      await interaction.showModal(modal);
     }
   },
 };
